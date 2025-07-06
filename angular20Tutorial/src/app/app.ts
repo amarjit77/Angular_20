@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Admin } from "./components/admin/admin";
 import { User } from "./components/user/user";
 import { Databinding } from "./components/databinding/databinding";
@@ -8,7 +8,7 @@ import { Controlflow } from "./components/controlflow/controlflow";
 
 @Component({
   selector: 'app-root',
-  imports: [Admin, User, Databinding, SignalEx, Controlflow],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
