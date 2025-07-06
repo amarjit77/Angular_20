@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-3">
+        <table style="width: 100%;">
+            <tr>
+                <td> Upper Case : {{strMessage}}</td>
+                <td> => {{strMessage | uppercase}}</td>
+            </tr>
+            <tr>
+                <td> Lower Case : {{strMessage}}</td>
+                <td> => {{strMessage | lowercase }}</td>
+            </tr>
+            <tr>
+                <td> Ttile Case : {{strMessage}}</td>
+                <td> => {{strMessage | titlecase }}</td>
+            </tr>
+            <tr>
+                <td> Enter Messgae : </td>
+                <td> <input type="text" [(ngModel)]="strMessage"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-4">
+        <table style="width: 100%;">
+            <tr>
+                <td> SLice : {{rollNoList}}</td>
+                <td> => {{rollNoList | slice: 0:4}}</td>
+            </tr>
+            <tr>
+                <td> Json : {{employeeObj}} </td>
+                <td> => {{employeeObj | json }}</td>
+            </tr>
+            <tr>
+                <td> Decimal : {{amount}}</td>
+                <td> => {{amount | number }}</td>
+            </tr>
+            <tr>
+                <td> Date : {{currDate}}</td>
+                <td> => {{currDate | date }} </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-5">
+        <table style="width: 100%;">
+            <tr>
+                <td> Date : {{currDate}}</td>
+                <td> => {{currDate | date: 'dd-MM-yy' }} </td>
+            </tr>
+            <tr>
+                <td> Date : {{currDate}}</td>
+                <td> => {{currDate | date: 'dd-MMM-yy' }} </td>
+            </tr>
+            <tr>
+                <td> Date : {{currDate}}</td>
+                <td> => {{currDate | date: 'dd-MMMM-yy' }} </td>
+            </tr>
+            <tr>
+                <td> Date : {{currDate}}</td>
+                <td> => {{currDate | date: 'dd-MM-yyyy' }} </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
