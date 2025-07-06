@@ -1,0 +1,49 @@
+<h1 [class]="myClass">{{coursName}}</h1>
+<table>
+    <tr>
+        <td>
+            <!-- Interpolaton binding -->
+            {{itemName}}
+        </td>
+        <td>
+            {{productPrice}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- Property binding -->
+            <input type="text" value="{{itemName}}" />
+        </td>
+        <td>
+            <!-- Property binding -->
+            <input type="text" [max]="maxlength" [min]="minlength" />
+        </td>
+        <td>
+            <!-- Property binding -->
+            <input [type]="inputType" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- Iterpolation and Event Binding-->
+            <input type="button" value="{{btnWelcome}}" (click)="showWelcomeMessage()" />
+        </td>
+         <td>
+            <!-- Iterpolation and Event Binding-->
+            <input type="button" value="Change Course Name" (click)="changeCourseName()" />
+        </td>
+        <td>
+            <select name="" id="" (change)="onCityChange()">
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Nagpur">Nagpur</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- Two Way Data binding-->
+            <input type="text" [(ngModel)]="coursName" />
+        </td>
+    </tr>
+</table>
