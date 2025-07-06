@@ -1,0 +1,16 @@
+s<div class="row justify-content-center align-items-center g-2">
+    <div class="col-4"><span [ngClass]="divClassName()">Column 1 - {{divClassName()}}</span></div>
+    <div class="col-4"><span [ngStyle]="{'background-color': isDiv2Blue ? 'blue' : 'white'}">Column -2 </span></div>
+    <div class="col-4">Column 3</div>
+</div>
+<div class="row justify-content-center align-items-center g-2">
+    <div class="col-4">
+        <button class="btn btn-success" (click)="setBgClass('bg-success')">Green</button>
+        <button class="btn btn-danger" (click)="setBgClass('bg-danger')">Red</button>
+    </div>
+    <div class="col-4">
+        <button class="btn btn-success" (click)="toggleDiv2Color()">Toggle BG Color</button>
+    </div>
+    <div class="col-4">Column</div>
+</div>
+
