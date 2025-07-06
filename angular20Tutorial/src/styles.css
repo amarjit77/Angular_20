@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+.heading{
+    font-size: xx-large;
+    font-style: normal;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
+.table.border{
+    border: 0rch;
+}
