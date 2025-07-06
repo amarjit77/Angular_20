@@ -6,6 +6,7 @@ import { Controlflow } from './components/controlflow/controlflow';
 import { User } from './components/user/user';
 import { AttDirective } from './components/att-directive/att-directive';
 import { Pipe } from './components/pipe/pipe';
+import { Getapi } from './components/getapi/getapi';
 
 export const routes: Routes = [
     { path: 'Admin', component: Admin },
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'Signal', component: SignalEx },
     { path: 'Databinding', component: Databinding },
     { path: 'AttDirective', component: AttDirective },
-    { path: 'Pipe', component: Pipe }
+    { path: 'Pipe', component: Pipe },
+    { path: 'GetAPI', component: Getapi }
 ];

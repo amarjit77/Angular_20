@@ -1,0 +1,12 @@
+.bold{
+    font-weight: bold;
+}
+
+.span{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.table-width{
+    width: 100%;
+}
