@@ -1,0 +1,15 @@
+.ApplyBgColor{
+    background-color: red;
+    color: white;
+}
+
+.RemoveBgColor{
+    background-color: white;
+    color: black;
+}
+
+.ResultFont{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+}

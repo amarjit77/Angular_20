@@ -1,0 +1,101 @@
+<div class="table-responsive">
+    <table style="width: 100%;" class="table table-primary table.border">
+        <thead>
+            <tr class="heading">
+                <th colspan="3">Control Flow</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="number" [(ngModel)]="num1" /><br><br>
+                    <input type="number" [(ngModel)]="num2" /><br><br>
+
+                    @if(flag)
+                    {
+                        <span class="ApplyBgColor"> Addition : </span>
+                    }
+                    @else
+                    {
+                        <span class="RemoveBgColor"> Subtraction : </span>
+                    }
+                    <input type="number" class="ResultFont" value="{{total}}" /><br><br>
+                    <button type="button" (click)="Add()"> ADDITION </button>   
+                    <button type="button" (click)="Sub()"> SUBTRACTION </button>   
+                </td>
+                <td>R1C2</td>
+                <td>R1C3</td>
+            </tr>
+            <tr class="">
+                <td>
+                    <span> Month Name : </span>
+                    @if(strMonthName == "Jan")
+                    {
+                        <span>Januwary</span>
+                    }
+                    @else if(strMonthName == "Feb")
+                    {
+                        <span>Feburay</span>
+                    }
+                    @else if(strMonthName == "Mar")
+                    {
+                        <span>March</span>
+                    }
+                    @else 
+                    {
+                        <span>Not match</span>
+                    }
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="strMonthName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        @for (item of cities; track $index) 
+                        {
+                            <li>${{item}}</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <select>
+                        @for (item of cities; track $index) 
+                        {
+                            <option>{{item}}</option>
+                        }
+                    </select>
+                </td>
+                <td>
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>Status</th>
+                        </tr>
+                        <tbody>
+                            @for (item of studentList; track $index) {
+                                <tr>
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.city}}</td>
+                                    <td>
+                                        @if(item.isActive)
+                                        {
+                                            <h6>Active</h6>
+                                        }
+                                        @else {
+                                            <h6>De-Active</h6>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
