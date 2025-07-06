@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="table-responsive col-12">
+        <table class="table table-primary table-bordered table-width">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Web Site</th>
+                    <th scope="col">Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of userList; track $index) {
+                    <tr >
+                        <td>{{$index + 1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{item.email}}</td>
+                        <td>
+                            <span class="span">Address :</span>
+                            {{item.address.street}} <br>
+                            {{item.address.suite}} <br>
+                            {{item.address.city}} <br>
+                            {{item.address.zipcode}} <br><br>
+                            <span class="span">Geo (LT, LN) :</span><br>
+                            {{item.address.geo.lat}} <br>
+                            {{item.address.geo.lng}} <br>
+                        </td>
+                        <td>{{item.phone}}</td>
+                        <td>{{item.website}}</td>
+                        <td>
+                             <span class="span">Company :</span>
+                            {{item.company.name}} <br>
+                            {{item.company.catchPhrase}} <br>
+                            {{item.company.bs}} <br>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive col-12">
+        <table class="table table-primary table-bordered table-width">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">User ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of todoItemsList; track $index) {
+                    <tr >
+                        <td>{{item.id}}</td>
+                        <td>{{item.userId}}</td>
+                        <td>{{item.title}}</td>
+                        <td>
+                            @if(item.completed == "true")
+                            {
+                                Completed
+                            }
+                            @else {
+                                InComplete.
+                            }
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
