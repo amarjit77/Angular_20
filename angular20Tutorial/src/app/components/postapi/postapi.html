@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-7">
+        <div class="card">
+            <div class="card-header bg-success">
+                Role List
+            </div>
+            <div class="body">
+                <div class="table-responsive">
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (item of userList; track $index) {
+                                <tr>
+                                    <td>{{item.Id}}</td>
+                                    <td>{{item.Role}}</td>
+                                    <td>{{item.Description}}</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="card">
+            <div class="card-header bg-success">
+                New Role
+            </div>
+            <div class="body">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Role Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="userObj.role">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Description</label>
+                        <input type="text" class="form-control" [(ngModel)]="userObj.description">
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-6  text-center">
+                        <button class="btn btn-secondary" (click)="Reset()">Reset</button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button class="btn btn-success" (click)="SaveRole()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
